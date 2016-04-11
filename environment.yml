@@ -61,4 +61,7 @@ dependencies:
   - jupyter-client==4.2.2
   - jupyter-console==4.1.1
   - jupyter-core==4.1.0
+  - keras==1.0.0
+  - pyyaml==3.11
+  - theano==0.8.1
 
