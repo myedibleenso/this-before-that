@@ -1,7 +1,6 @@
 name: bionlp
 dependencies:
 - python>=3.5
-- appnope
 - cycler
 - decorator
 - entrypoints
