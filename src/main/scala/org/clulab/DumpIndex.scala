@@ -22,9 +22,9 @@ object DumpIndex extends App {
   val config = ConfigFactory.load()
   val indexDir = config.getString("indexDir")
   val searcher = new NxmlSearcher(indexDir)
-  val threadLimit = config.getInt()
+  val threadLimit = config.getInt("threadLimit")
   val bioproc = PaperReader.rs.processor
-  val outDir = "/data/nlp/corpora/word2vec/pubmed/papers"
+  val outDir = config.getString("indexDump")
 
   def writeToCompressedFile(text: String, outFile: String): Unit = {
     try {
@@ -59,7 +59,7 @@ object DumpIndex extends App {
     } {
       val sanitizedLines: Seq[String] = doc.sentences.map{ s =>
         // sanitize each word
-        s.words.map(Word2Vec.sanitize).mkString(" ")
+        s.words.map(w => Word2Vec.sanitizeWord(w)).mkString(" ")
       }
       // write to disk...
       val gzipOutFile = GzipUtils.getCompressedFilename(outFile.getAbsolutePath)
