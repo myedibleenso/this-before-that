@@ -4,9 +4,9 @@ import com.typesafe.config.ConfigFactory
 import edu.arizona.sista.reach.nxml.indexer.NxmlSearcher
 import edu.arizona.sista.embeddings.word2vec.Word2Vec
 import edu.arizona.sista.reach.PaperReader
+import org.apache.lucene.document.{Document => LuceneDocument}
 import scala.collection.parallel.ForkJoinTaskSupport
 import java.util.zip.GZIPOutputStream
-import org.apache.commons.io.FileUtils
 import org.apache.commons.compress.compressors.gzip._
 import java.io.{FileOutputStream, Writer, OutputStreamWriter, File}
 
@@ -26,6 +26,7 @@ object DumpIndex extends App {
   val bioproc = PaperReader.rs.processor
   val outDir = config.getString("indexDump")
 
+  /** Dumps processed text to paperid.txt.gz file */
   def writeToCompressedFile(text: String, outFile: String): Unit = {
     try {
       val output: FileOutputStream = new FileOutputStream(outFile)
@@ -34,39 +35,42 @@ object DumpIndex extends App {
       writer.close()
       output.close()
     } catch {
-      case _ => println(s"Couldn't write $outFile")
+      case e: Exception => println(s"Couldn't write $outFile")
     }
   }
 
+  /** Prepares text of LuceneDocument for input to embedding generation procedure <br>
+    * Dumps text to paperid.txt.gz file
+    * */
+  def processEntry(entry: LuceneDocument): Unit = {
+    // get text and id
+    val text = entry.getField("text").stringValue
+    val pmid = entry.getField("id").stringValue
+    // tokenize
+    val doc = bioproc.annotate(text)
+    val outFile = new File(outDir, s"$pmid.txt")
+    // iterate over each sentence
+    val sanitizedLines: Seq[String] = doc.sentences.map{ s =>
+      // sanitize each word
+      s.words.map(w => Word2Vec.sanitizeWord(w)).mkString(" ")
+    }
+    // write to disk...
+    val gzipOutFile = GzipUtils.getCompressedFilename(outFile.getAbsolutePath)
+    println(s"writing $gzipOutFile ...")
+    writeToCompressedFile(sanitizedLines.mkString("\n"), gzipOutFile)
+  }
+
+  /** Process each doc in Lucene index */
   def dumpFilesFromIndex(searcher: NxmlSearcher, nThreads: Int): Unit = {
     // parallelize processing of indexed docs
     val docs = (0 to searcher.reader.maxDoc).par
     // limit threads
     docs.tasksupport = new ForkJoinTaskSupport(new scala.concurrent.forkjoin.ForkJoinPool(nThreads))
-
     for {
-    // is there an easier way to iterate
-    // over the indexed documents?
+      // iterate over the indexed documents
       i <- docs
       entry = searcher.reader.document(i)
-      // get text and id
-      txt = entry.getField("text").stringValue
-      pmid = entry.getField("id").stringValue
-      // tokenize
-      doc = bioproc.annotate(txt)
-      outFile = new File(outDir, s"$pmid.txt")
-    // iterate over each sentence
-    } {
-      val sanitizedLines: Seq[String] = doc.sentences.map{ s =>
-        // sanitize each word
-        s.words.map(w => Word2Vec.sanitizeWord(w)).mkString(" ")
-      }
-      // write to disk...
-      val gzipOutFile = GzipUtils.getCompressedFilename(outFile.getAbsolutePath)
-      writeToCompressedFile(sanitizedLines.mkString("\n"), gzipOutFile)
-      //GzipCompressorOutputStream
-      //FileUtils.writeLines(outFile, sanitizedLines)
-    }
+    } processEntry(entry)
   }
 
   // prepare indexed papers for generation of embeddings
