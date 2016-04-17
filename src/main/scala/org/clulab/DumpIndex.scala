@@ -46,6 +46,7 @@ object DumpIndex extends App {
     // get text and id
     val text = entry.getField("text").stringValue
     val pmid = entry.getField("id").stringValue
+    println(s"Processing $pmid ...")
     // tokenize
     val doc = bioproc.annotate(text)
     val outFile = new File(outDir, s"$pmid.txt")
@@ -62,17 +63,18 @@ object DumpIndex extends App {
 
   /** Process each doc in Lucene index */
   def dumpFilesFromIndex(searcher: NxmlSearcher, nThreads: Int): Unit = {
-    // parallelize processing of indexed docs
     val docs = (0 to searcher.reader.maxDoc).par
     // limit threads
     docs.tasksupport = new ForkJoinTaskSupport(new scala.concurrent.forkjoin.ForkJoinPool(nThreads))
     for {
-      // iterate over the indexed documents
+      // limited parallel iteration over the indexed documents
       i <- docs
-      entry = searcher.reader.document(i)
-    } processEntry(entry)
+    } {
+      val entry = searcher.reader.document(i)
+      processEntry(entry)
+    }
   }
-
+  println("Processing lucene documents ...")
   // prepare indexed papers for generation of embeddings
   dumpFilesFromIndex(searcher, threadLimit)
 }
