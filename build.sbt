@@ -1,4 +1,4 @@
-lazy val root = (project in file(".")).settings(
+val root: Project = (project in file(".")).settings(
   name := "this-before-that",
   organization := "org.clulab",
   version := "0.1.0",
@@ -7,7 +7,8 @@ lazy val root = (project in file(".")).settings(
   testOptions in Test += Tests.Argument("-oD")
 ).dependsOn(
     // use the latest reach build
-    ProjectRef(uri("git://github.com/clulab/reach.git#precedence-corpus"), "reach")
+    //ProjectRef(uri("git://github.com/clulab/reach.git#precedence-corpus"), "reach")
+    RootProject(uri("git://github.com/clulab/reach.git#precedence-corpus"))
   )
 
 libraryDependencies ++= Seq(
