@@ -121,8 +121,8 @@
     "relation": {
       "id": "relation",
       "type": "string",
-      "enum": ["E1 precedes E2", "E2 precedes E1","E1 subsumes E2", "E2 precedes E1", "Equivalent", "Bug", "None", "Other"],
-      "description": "The type of relation that holds between e1 and e2.  Values found in the corpus: \"E1 precedes E2\" (causal precedence), \"E2 precedes E1\" (causal precedence), \"E1 subsumes E2\" (E1 is a more specific or complete mention of E2), \"E2 precedes E1\" (E2 is a more specific or complete mention of E1), \"Equivalent\" (the event mentions are equivalent), \"Bug\" (the extracted mentions incorrect), \"None\" (no relation holds), \"Other\" (some other relation holds)"
+      "enum": ["E1 precedes E2", "E2 precedes E1","E1 subsumes E2", "E2 subsumes E1", "Equivalent", "Bug", "None", "Other"],
+      "description": "The type of relation that holds between e1 and e2.  Values found in the corpus: \"E1 precedes E2\" (causal precedence), \"E2 precedes E1\" (causal precedence), \"E1 subsumes E2\" (E1 is a more specific or complete mention of E2), \"E2 subsumes E1\" (E2 is a more specific or complete mention of E1), \"Equivalent\" (the event mentions are equivalent), \"Bug\" (the extracted mentions incorrect), \"None\" (no relation holds), \"Other\" (some other relation holds)"
     },
     "text": {
       "id": "text",
