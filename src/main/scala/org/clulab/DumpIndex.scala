@@ -67,7 +67,7 @@ object DumpIndex extends App {
 
   /** Process each doc in Lucene index */
   def dumpFilesFromIndex(searcher: NxmlSearcher, nThreads: Int): Unit = {
-    val docs = (0 to searcher.reader.maxDoc).par
+    val docs = (0 until searcher.reader.maxDoc).par
     // limit threads
     docs.tasksupport = new ForkJoinTaskSupport(new scala.concurrent.forkjoin.ForkJoinPool(nThreads))
     for {
