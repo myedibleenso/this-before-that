@@ -5,6 +5,7 @@ dependencies:
 - decorator
 - entrypoints
 - freetype
+- gensim
 - ipykernel
 - ipython
 - ipython_genutils
@@ -40,6 +41,7 @@ dependencies:
 - qt
 - qtconsole
 - readline
+- requests
 - scipy
 - seaborn
 - setuptools
