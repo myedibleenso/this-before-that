@@ -4,6 +4,7 @@ import com.typesafe.config.ConfigFactory
 import edu.arizona.sista.reach.nxml.indexer.NxmlSearcher
 import edu.arizona.sista.embeddings.word2vec.Word2Vec
 import edu.arizona.sista.reach.PaperReader
+import edu.arizona.sista.processors.Document
 import org.apache.lucene.document.{Document => LuceneDocument}
 import scala.collection.parallel.ForkJoinTaskSupport
 import java.util.zip.GZIPOutputStream
@@ -48,7 +49,7 @@ object DumpIndex extends App {
     val pmid = entry.getField("id").stringValue
     println(s"Processing $pmid ...")
     // tokenize
-    val doc = bioproc.annotate(text)
+    val doc = tokenize(text)
     val outFile = new File(outDir, s"$pmid.txt")
     // iterate over each sentence
     val sanitizedLines: Seq[String] = doc.sentences.map{ s =>
@@ -60,6 +61,9 @@ object DumpIndex extends App {
     println(s"writing $gzipOutFile ...")
     writeToCompressedFile(sanitizedLines.mkString("\n"), gzipOutFile)
   }
+
+  /** Split sentences and tokenize */
+  def tokenize(text: String): Document = bioproc.mkDocument(text)
 
   /** Process each doc in Lucene index */
   def dumpFilesFromIndex(searcher: NxmlSearcher, nThreads: Int): Unit = {
