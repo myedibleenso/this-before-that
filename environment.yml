@@ -43,6 +43,7 @@ dependencies:
 - readline
 - requests
 - scipy
+- scikit-learn
 - seaborn
 - setuptools
 - simplegeneric
