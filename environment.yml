@@ -31,6 +31,7 @@ dependencies:
 - pickleshare
 - pip
 - ptyprocess
+- pydot-ng
 - pygments
 - pyparsing
 - pyqt
