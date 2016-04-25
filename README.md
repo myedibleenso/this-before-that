@@ -30,6 +30,11 @@ Causal precedence relations in the biomedical domain
 ```bash
 conda env create -f environment.yml
 ```
+The environment can be updated using the following command: 
+
+```bash
+conda env update -f environment.yml
+```
 
 3. Activate the environment:
 ```conda
