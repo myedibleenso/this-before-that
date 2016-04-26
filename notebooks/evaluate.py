@@ -27,16 +27,19 @@ def compute_performance(results_file):
     macro_r = 0
     macro_f1 = 0
     support_total = 0
+    valid_classes = len(rows) - 1
     for row in rows:
-        macro_p += row[1]
-        macro_r += row[2]
-        macro_f1 += row[3]
-        support_total += row[-1]
-    macro_p /= len(rows)
-    macro_r /= len(rows)
-    macro_f1 /= len(rows)
+        # only consider positive classes when computing macro
+        if row[0] != "None":
+            macro_p += row[1]
+            macro_r += row[2]
+            macro_f1 += row[3]
+            support_total += row[-1]
+    macro_p /= valid_classes
+    macro_r /= valid_classes
+    macro_f1 /= valid_classes
         
-    rows.append(["TOTAL (macro)", macro_p, macro_r, macro_f1, support_total])
+    rows.append(["TOTAL (macro for positive classes)", macro_p, macro_r, macro_f1, support_total])
 
     return pd.DataFrame(rows, columns=header)
 
@@ -68,16 +71,19 @@ def compute_performance_from_df(df):
     macro_r = 0
     macro_f1 = 0
     support_total = 0
+    valid_classes = len(rows) - 1
     for row in rows:
-        macro_p += row[1]
-        macro_r += row[2]
-        macro_f1 += row[3]
-        support_total += row[-1]
-    macro_p /= len(rows)
-    macro_r /= len(rows)
-    macro_f1 /= len(rows)
+        # only consider positive classes when computing macro
+        if row[0] != "None":
+            macro_p += row[1]
+            macro_r += row[2]
+            macro_f1 += row[3]
+            support_total += row[-1]
+    macro_p /= valid_classes
+    macro_r /= valid_classes
+    macro_f1 /= valid_classes
         
-    rows.append(["TOTAL (macro)", macro_p, macro_r, macro_f1, support_total])
+    rows.append(["TOTAL (macro for positive classes)", macro_p, macro_r, macro_f1, support_total])
 
     return pd.DataFrame(rows, columns=header)
 #performance = compute_performance("results.tsv")
