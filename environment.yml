@@ -5,6 +5,7 @@ dependencies:
 - decorator
 - entrypoints
 - freetype
+- graphviz
 - gensim
 - ipykernel
 - ipython
