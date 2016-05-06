@@ -4,9 +4,9 @@ num_classes: 3
 # the number of samples to use for one update
 batch_size: 32
 # the max number of epochs to use
-num_epochs: 20
+num_epochs: 100
 # how many folds to use for cross validation
-folds: 5
+folds: 10
 validation_split: 0.25
 annotations_file: "../annotations.json"
 classifier_results: "results-lstm.tsv"
