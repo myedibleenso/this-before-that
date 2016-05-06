@@ -9,9 +9,8 @@ from keras.layers.embeddings import Embedding
 from keras.layers.recurrent import LSTM, SimpleRNN, GRU
 from keras.callbacks import EarlyStopping
 from evaluate import *
+from utils import *
 import yaml
-import argparse
-import os
 import pandas as pd
 import numpy as np
 np.random.seed(42)  # for reproducibility
@@ -93,7 +92,7 @@ class Experiment(object):
         # set labels other than precedence to "None"
         label_to_value = config["label_LUT"]
         # filter out bugs and empty relations
-        labels = df.relation.replace(label_to_value).values
+        labels = data.relation.replace(label_to_value).values
         return labels
 
     # folds are made by preserving the percentage of samples for each class
@@ -289,24 +288,11 @@ class Experiment(object):
         # get ordered predictions
         predictions = [predictions[i] for i in range(len(predictions))]
         self.write_predictions_to_file(predictions)
-        self.evaluate(predictions, with_pretraining=True)
-
-    def expand_path(p):
-        return os.path.expanduser(p)
-
-    def mk_argparser():
-        parser = argparse.ArgumentParser(description='Train an LSTM for the prediction of causal precedence.')
-        parser.add_argument(
-            '-c', '--config',
-            dest='config_file',
-            required=True,
-            help='a .yml config file'
-        )
-        return parser
+        self.evaluate()
 
 if __name__ == "__main__":
-    args = parser.parse_args()
-    config_file = args.config_file
+    args = get_args()
+    config_file = expand_path(args.config_file)
     print("Loading {}".format(config_file))
     config = yaml.load(open(config_file, "r"))
     experiment = Experiment(config)
