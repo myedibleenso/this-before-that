@@ -1,5 +1,6 @@
 from gensim.models.word2vec import Word2Vec # make use of pretrained embeddings
 from sklearn.cross_validation import StratifiedKFold
+import theano
 from keras.preprocessing import sequence
 from keras.preprocessing.text import one_hot, base_filter, Tokenizer
 from keras.utils import np_utils # for converting labels vectors to matrices in multi-class cases
@@ -8,7 +9,10 @@ from keras.layers.core import Dense, Dropout, Activation
 from keras.layers.embeddings import Embedding
 from keras.layers.recurrent import LSTM, SimpleRNN, GRU
 from keras.callbacks import EarlyStopping
-from keras.utils.visualize_util import model_to_dot, plot
+try:
+    from keras.utils.visualize_util import model_to_dot, plot
+except:
+    print("Can't import graphviz-based plotting utilities")
 from evaluate import *
 from utils import *
 import yaml
@@ -303,6 +307,8 @@ class Experiment(object):
         self.evaluate()
 
 if __name__ == "__main__":
+    theano.config.openmp = True
+    OMP_NUM_THREADS=4
     args = get_args()
     config_file = expand_path(args.config_file)
     print("Loading {}".format(config_file))
