@@ -181,14 +181,15 @@ class Experiment(object):
         x,
         labels,
         train_indices,
-        test_indices
+        test_indices,
+        dev_indices
         ):
         """
         """
         config = self.config
         num_epochs = config["num_epochs"]
         batch_size = config["batch_size"]
-        validation_split = config["validation_split"]
+        #validation_split = config["validation_split"]
         num_classes = config["num_classes"]
 
         # convert class vectors to binary class matrices
@@ -202,6 +203,9 @@ class Experiment(object):
         test_x = x[test_indices]
         test_labels = labels[test_indices]
 
+        # prepare validation dataset
+        dev_x = x[dev_indices]
+        dev_labels = labels[dev_indices]
         # add early stopping to help avoid overfitting
         early_stopping = EarlyStopping(monitor='val_loss', patience=2)
 
@@ -218,9 +222,9 @@ class Experiment(object):
             # 0 for no logging, 1 for progress bar logging, 2 for one log line per epoch
             verbose=1,
             # the validation data to use,
-            #validation_data=(x_dev, y_dev),
+            validation_data=(dev_x, dev_labels),
             # how much data to reserve for validation (takes n% starting at the end of the dataset)
-            validation_split=0.25,
+            #validation_split=0.25,
             # should the training data be shuffled?
             shuffle=True,
             # dict mapping classes to weight for scaling in loss function
@@ -289,11 +293,17 @@ class Experiment(object):
         skf = StratifiedKFold(labels, n_folds=folds, shuffle=True)
 
         predictions = dict()
+        skf = list(skf)
         for i, (train, test) in enumerate(skf):
             print("Running fold {} / {} ...".format(i+1, folds))
             model = None
             model = self.create_model()
-            test_predictions = self.train_and_evaluate_model(model, x, labels, train, test)
+            # use next fold for validation
+            if i == 0 and i + 1 < len(skf):
+                (dev, _) = skf[i+1]
+            else:
+                (dev, _) = skf[i-1]
+            test_predictions = self.train_and_evaluate_model(model, x, labels, train, test, dev)
             # store predictions
             for i in range(len(test)):
                 # check each test index
