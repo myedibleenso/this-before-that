@@ -8,6 +8,7 @@ from keras.layers.core import Dense, Dropout, Activation
 from keras.layers.embeddings import Embedding
 from keras.layers.recurrent import LSTM, SimpleRNN, GRU
 from keras.callbacks import EarlyStopping
+from keras.utils.visualize_util import model_to_dot, plot
 from evaluate import *
 from utils import *
 import yaml
@@ -159,6 +160,17 @@ class Experiment(object):
         )
         return model
 
+    def write_model_graph(self):
+        model = self.create_model()
+        # write dot text to file
+        with open(config["model_dot"], "wb") as out:
+            m = model_to_dot(model)
+            dot_text = m.create_dot()
+            out.write(dot_text)
+            print("Wrote .dot to {}".format(config["model_dot"]))
+        # write graph to file
+        plot(model, to_file=config["model_graph"], show_shapes=True)
+
     def train_and_evaluate_model(
         self,
         model,
@@ -297,3 +309,7 @@ if __name__ == "__main__":
     config = yaml.load(open(config_file, "r"))
     experiment = Experiment(config)
     experiment.run_kfold()
+    try:
+        experiment.write_model_graph()
+    except:
+        print("Problem writing model graph")

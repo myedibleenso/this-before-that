@@ -32,3 +32,7 @@ label_LUT:
   "E2 specifies E1": 0
   "Equivalent": 0
   "Other": 0
+
+# model graph
+model_dot: "lstm.dot"
+model_graph: "lstm.png"
