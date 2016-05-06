@@ -308,8 +308,10 @@ if __name__ == "__main__":
     print("Loading {}".format(config_file))
     config = yaml.load(open(config_file, "r"))
     experiment = Experiment(config)
-    experiment.run_kfold()
+    # plot model
     try:
         experiment.write_model_graph()
     except:
         print("Problem writing model graph")
+    # run kfolds
+    experiment.run_kfold()
