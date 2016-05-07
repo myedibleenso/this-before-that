@@ -1,0 +1,39 @@
+# the maximum size of a sequence
+max_len: 200
+num_classes: 3
+# the number of samples to use for one update
+batch_size: 32
+# the max number of epochs to use
+num_epochs: 100
+# how many folds to use for cross validation
+folds: 10
+# the code is now using a custom dev fold
+#validation_split: 0.25
+annotations_file: "../annotations.json"
+classifier_results: "results-pitchfork-lstm-with-pretraining.tsv"
+with_pretraining: True
+w2v_data: "../pmc-openaccess-w2v.bin"
+# remove numbers, punct (except for _), etc.
+custom_filter: "!#$%&()*+,-.\\/:;<=>?@[]^_`{|}~0123456789\"'"
+value_LUT:
+  0: "None"
+  1: "E1 precedes E2"
+  2: "E2 precedes E1"
+  3: "E1 specifies E2"
+  4: "E2 specifies E1"
+  5: "Equivalent"
+  6: "Other"
+
+
+label_LUT:
+  "None": 0
+  "E1 precedes E2": 1
+  "E2 precedes E1": 2
+  "E1 specifies E2": 0
+  "E2 specifies E1": 0
+  "Equivalent": 0
+  "Other": 0
+
+# model graph
+model_dot: "pitchfork-lstm.dot"
+model_graph: "pitchfork-lstm.png"
