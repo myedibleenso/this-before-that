@@ -1,0 +1,905 @@
+nnamed: 0	Gold	Predicted
+0	E1 precedes E2	E1 precedes E2
+1	E1 precedes E2	E1 precedes E2
+2	None	None
+3	None	None
+4	None	None
+5	E1 precedes E2	None
+6	E1 precedes E2	E2 precedes E1
+7	E1 precedes E2	None
+8	None	None
+9	None	None
+10	None	None
+11	None	None
+12	None	None
+13	None	None
+14	None	None
+15	None	None
+16	None	None
+17	None	None
+18	None	None
+19	None	None
+20	None	None
+21	E2 precedes E1	None
+22	None	None
+23	None	None
+24	None	None
+25	None	None
+26	E2 precedes E1	None
+27	None	None
+28	None	None
+29	None	E2 precedes E1
+30	E2 precedes E1	None
+31	E1 precedes E2	None
+32	None	None
+33	None	None
+34	None	None
+35	None	None
+36	None	None
+37	None	None
+38	None	None
+39	None	None
+40	None	None
+41	None	None
+42	None	None
+43	None	E1 precedes E2
+44	E1 precedes E2	None
+45	None	None
+46	None	None
+47	None	None
+48	None	None
+49	None	None
+50	None	None
+51	None	None
+52	None	None
+53	None	None
+54	None	None
+55	None	None
+56	E1 precedes E2	None
+57	None	None
+58	None	None
+59	E1 precedes E2	None
+60	E2 precedes E1	E1 precedes E2
+61	E1 precedes E2	None
+62	None	None
+63	None	None
+64	None	None
+65	None	E1 precedes E2
+66	E1 precedes E2	E1 precedes E2
+67	None	None
+68	E1 precedes E2	None
+69	None	None
+70	E1 precedes E2	E1 precedes E2
+71	E1 precedes E2	None
+72	E1 precedes E2	E1 precedes E2
+73	None	None
+74	None	None
+75	None	None
+76	None	None
+77	None	None
+78	None	None
+79	E1 precedes E2	None
+80	E1 precedes E2	None
+81	E1 precedes E2	None
+82	None	None
+83	None	None
+84	None	None
+85	None	None
+86	E2 precedes E1	E1 precedes E2
+87	None	None
+88	None	None
+89	E1 precedes E2	E1 precedes E2
+90	None	None
+91	None	None
+92	None	E1 precedes E2
+93	E1 precedes E2	E1 precedes E2
+94	None	None
+95	None	None
+96	E1 precedes E2	None
+97	E1 precedes E2	None
+98	None	None
+99	E1 precedes E2	None
+100	None	None
+101	None	None
+102	None	None
+103	E2 precedes E1	None
+104	None	None
+105	E1 precedes E2	None
+106	E1 precedes E2	E1 precedes E2
+107	None	None
+108	E1 precedes E2	None
+109	E1 precedes E2	None
+110	E1 precedes E2	None
+111	None	None
+112	None	None
+113	None	None
+114	None	None
+115	None	None
+116	None	None
+117	None	None
+118	E1 precedes E2	None
+119	E1 precedes E2	None
+120	None	None
+121	None	None
+122	None	None
+123	E1 precedes E2	None
+124	E1 precedes E2	None
+125	None	E1 precedes E2
+126	None	E1 precedes E2
+127	None	None
+128	E1 precedes E2	None
+129	None	None
+130	None	None
+131	None	E1 precedes E2
+132	None	E1 precedes E2
+133	E1 precedes E2	None
+134	None	None
+135	None	None
+136	E1 precedes E2	None
+137	None	None
+138	None	None
+139	None	None
+140	None	None
+141	None	None
+142	E1 precedes E2	E1 precedes E2
+143	None	None
+144	None	None
+145	None	None
+146	None	None
+147	None	None
+148	E1 precedes E2	E2 precedes E1
+149	E2 precedes E1	None
+150	None	None
+151	E2 precedes E1	None
+152	None	None
+153	None	E1 precedes E2
+154	E1 precedes E2	E1 precedes E2
+155	None	None
+156	None	None
+157	None	None
+158	None	None
+159	E1 precedes E2	None
+160	None	None
+161	None	None
+162	None	None
+163	None	None
+164	None	None
+165	None	E1 precedes E2
+166	None	None
+167	None	None
+168	E1 precedes E2	E1 precedes E2
+169	None	None
+170	E1 precedes E2	E1 precedes E2
+171	None	None
+172	None	None
+173	E1 precedes E2	None
+174	None	None
+175	None	None
+176	None	None
+177	None	E2 precedes E1
+178	None	E1 precedes E2
+179	None	None
+180	None	None
+181	None	E1 precedes E2
+182	None	None
+183	E2 precedes E1	None
+184	E1 precedes E2	None
+185	None	None
+186	None	E1 precedes E2
+187	E1 precedes E2	E1 precedes E2
+188	E1 precedes E2	E1 precedes E2
+189	None	None
+190	None	None
+191	E1 precedes E2	None
+192	E1 precedes E2	E1 precedes E2
+193	None	None
+194	None	None
+195	E1 precedes E2	None
+196	None	None
+197	None	None
+198	None	None
+199	None	None
+200	None	None
+202	None	None
+203	None	None
+204	None	None
+205	None	None
+206	None	None
+207	None	None
+208	None	None
+209	None	E1 precedes E2
+210	None	None
+211	None	None
+212	None	None
+213	E1 precedes E2	E1 precedes E2
+215	None	None
+216	None	None
+217	None	None
+218	None	None
+219	E1 precedes E2	E1 precedes E2
+220	E2 precedes E1	None
+221	None	None
+222	None	E1 precedes E2
+223	None	None
+224	None	None
+225	E1 precedes E2	None
+226	None	None
+227	E2 precedes E1	None
+228	None	None
+229	None	None
+230	E1 precedes E2	None
+231	E2 precedes E1	None
+232	None	E1 precedes E2
+233	None	None
+234	None	None
+235	None	E1 precedes E2
+236	E1 precedes E2	E1 precedes E2
+237	E1 precedes E2	None
+238	E1 precedes E2	None
+239	None	None
+240	None	None
+241	None	None
+242	None	E1 precedes E2
+243	None	None
+244	None	None
+245	None	None
+246	E1 precedes E2	None
+247	E1 precedes E2	None
+248	None	None
+249	None	None
+250	None	None
+251	None	None
+252	None	None
+253	None	None
+254	None	None
+255	None	E1 precedes E2
+256	E1 precedes E2	None
+257	None	None
+258	None	None
+259	None	None
+260	None	None
+261	None	None
+262	E1 precedes E2	E1 precedes E2
+263	E1 precedes E2	None
+264	None	None
+265	None	None
+266	None	None
+267	E1 precedes E2	None
+268	None	None
+269	None	None
+270	None	E1 precedes E2
+271	None	None
+272	None	None
+273	E1 precedes E2	E1 precedes E2
+274	None	None
+275	E1 precedes E2	None
+276	None	None
+277	None	None
+278	E1 precedes E2	None
+279	None	None
+280	None	None
+281	None	None
+282	None	E1 precedes E2
+283	None	E1 precedes E2
+284	None	None
+285	None	None
+286	None	None
+287	None	None
+288	None	None
+289	E1 precedes E2	None
+290	None	None
+291	E1 precedes E2	None
+292	None	None
+293	E2 precedes E1	None
+294	E1 precedes E2	None
+295	None	None
+296	None	None
+297	None	None
+298	None	None
+299	None	None
+300	None	None
+301	None	None
+302	E1 precedes E2	None
+303	None	E1 precedes E2
+304	None	None
+305	E1 precedes E2	None
+306	None	None
+307	E1 precedes E2	None
+308	None	None
+309	None	None
+310	E1 precedes E2	None
+311	None	None
+312	E1 precedes E2	None
+313	E1 precedes E2	None
+314	None	None
+315	E1 precedes E2	None
+316	None	None
+317	None	E1 precedes E2
+318	None	None
+319	None	None
+320	None	None
+321	E1 precedes E2	None
+322	None	None
+323	None	None
+324	None	None
+325	None	None
+326	E2 precedes E1	None
+327	E1 precedes E2	None
+328	None	None
+329	None	None
+330	E1 precedes E2	None
+332	None	None
+333	E1 precedes E2	None
+334	None	None
+335	None	None
+336	None	None
+337	E1 precedes E2	None
+338	E2 precedes E1	None
+339	None	None
+340	None	None
+341	None	None
+342	E1 precedes E2	None
+343	E2 precedes E1	None
+344	None	None
+345	None	None
+346	None	None
+347	None	None
+348	E1 precedes E2	None
+349	None	None
+350	E1 precedes E2	None
+351	None	None
+352	E1 precedes E2	E1 precedes E2
+353	None	None
+354	E1 precedes E2	E1 precedes E2
+355	None	None
+356	None	E1 precedes E2
+357	None	None
+358	E1 precedes E2	None
+359	None	E1 precedes E2
+360	None	None
+361	E2 precedes E1	E1 precedes E2
+362	None	None
+363	E1 precedes E2	None
+364	E1 precedes E2	None
+365	None	None
+366	None	None
+367	None	None
+368	None	None
+369	None	None
+370	None	None
+371	E1 precedes E2	None
+372	E1 precedes E2	None
+373	None	None
+374	E1 precedes E2	None
+375	None	None
+377	E1 precedes E2	None
+378	None	None
+379	None	None
+380	E1 precedes E2	E2 precedes E1
+381	E2 precedes E1	None
+382	None	None
+383	E1 precedes E2	None
+384	None	None
+385	None	None
+386	None	None
+387	E1 precedes E2	E1 precedes E2
+388	None	None
+389	None	None
+390	None	None
+391	None	E1 precedes E2
+392	None	None
+393	None	None
+394	None	E1 precedes E2
+395	None	None
+396	None	None
+397	None	None
+398	None	None
+399	None	None
+400	None	E1 precedes E2
+401	E1 precedes E2	None
+402	None	None
+403	None	None
+405	None	None
+406	None	None
+407	None	None
+408	None	None
+409	None	None
+410	None	None
+411	None	None
+412	None	None
+413	E1 precedes E2	None
+414	None	None
+415	None	None
+416	None	None
+417	None	E1 precedes E2
+418	E1 precedes E2	None
+419	None	None
+420	None	None
+421	E1 precedes E2	None
+422	None	None
+423	None	E1 precedes E2
+424	None	None
+425	None	None
+426	E1 precedes E2	E1 precedes E2
+427	None	None
+428	None	None
+429	None	None
+430	None	None
+431	None	None
+432	None	None
+433	None	None
+434	None	None
+435	E1 precedes E2	None
+436	E1 precedes E2	None
+437	None	None
+438	None	E1 precedes E2
+439	None	None
+440	None	None
+441	None	None
+442	E1 precedes E2	None
+443	None	None
+444	None	None
+445	None	None
+446	None	None
+447	None	None
+448	None	E1 precedes E2
+449	None	None
+450	None	None
+451	None	E1 precedes E2
+452	None	None
+453	None	None
+454	None	None
+455	None	E1 precedes E2
+457	None	None
+458	E1 precedes E2	E1 precedes E2
+459	E1 precedes E2	E1 precedes E2
+460	None	None
+461	None	None
+462	E2 precedes E1	None
+463	None	None
+464	None	None
+465	None	None
+466	None	None
+467	None	None
+468	None	None
+469	None	None
+470	None	None
+471	None	None
+472	None	None
+473	None	None
+474	E2 precedes E1	None
+475	None	None
+476	None	None
+477	None	None
+478	None	None
+479	None	None
+480	None	None
+481	None	None
+482	None	None
+483	None	None
+484	None	None
+485	None	None
+486	None	None
+487	None	None
+488	None	None
+489	None	None
+490	None	E1 precedes E2
+491	None	None
+492	None	None
+493	None	None
+494	E1 precedes E2	E1 precedes E2
+495	None	None
+496	None	None
+497	None	E1 precedes E2
+498	None	None
+499	None	None
+500	E2 precedes E1	None
+501	None	None
+502	None	None
+503	None	None
+504	None	None
+505	None	None
+506	E1 precedes E2	E1 precedes E2
+507	None	None
+508	None	None
+509	None	None
+510	None	None
+511	None	E1 precedes E2
+512	None	None
+513	None	None
+514	E1 precedes E2	E1 precedes E2
+515	None	None
+516	None	None
+517	E1 precedes E2	None
+518	E1 precedes E2	None
+519	None	None
+520	None	E1 precedes E2
+521	None	None
+522	None	None
+523	None	None
+524	None	None
+525	None	None
+526	None	None
+527	None	None
+528	None	None
+529	None	None
+530	None	None
+531	None	None
+532	None	None
+533	None	None
+534	None	None
+535	None	None
+536	None	None
+537	None	None
+538	E1 precedes E2	None
+539	None	None
+540	None	None
+541	None	E1 precedes E2
+542	E1 precedes E2	None
+543	None	None
+544	E1 precedes E2	None
+545	None	None
+546	None	None
+547	None	None
+548	None	E1 precedes E2
+549	None	None
+550	E1 precedes E2	None
+551	None	None
+552	None	None
+553	None	None
+554	None	None
+555	None	None
+556	E1 precedes E2	None
+557	None	E1 precedes E2
+558	None	E1 precedes E2
+559	None	None
+560	None	None
+561	E1 precedes E2	None
+562	E1 precedes E2	None
+563	None	None
+564	None	None
+565	None	E1 precedes E2
+566	E1 precedes E2	E1 precedes E2
+567	None	E1 precedes E2
+568	E2 precedes E1	None
+569	None	None
+570	None	None
+571	None	None
+572	None	None
+573	None	None
+574	None	None
+575	None	None
+576	None	None
+577	None	None
+578	E1 precedes E2	E1 precedes E2
+579	None	None
+580	None	None
+581	None	None
+582	None	None
+583	None	None
+584	None	None
+585	None	None
+586	E1 precedes E2	None
+587	None	None
+588	None	E2 precedes E1
+589	None	None
+590	None	None
+591	None	None
+593	None	None
+594	E1 precedes E2	E1 precedes E2
+595	None	None
+596	None	None
+597	None	None
+598	E1 precedes E2	None
+599	None	None
+600	None	None
+601	None	None
+602	None	None
+603	None	None
+604	E1 precedes E2	None
+605	None	None
+606	None	None
+607	E1 precedes E2	E1 precedes E2
+608	None	None
+609	None	None
+610	None	None
+611	None	None
+612	E1 precedes E2	None
+613	None	None
+614	None	None
+615	None	None
+616	None	None
+617	None	None
+618	E1 precedes E2	None
+619	None	None
+620	None	None
+621	None	None
+622	E1 precedes E2	None
+623	None	None
+624	None	None
+625	None	None
+626	None	None
+627	None	E1 precedes E2
+628	None	None
+629	E1 precedes E2	None
+630	None	None
+631	E1 precedes E2	None
+632	None	None
+633	None	None
+634	None	None
+635	None	None
+636	None	None
+637	None	None
+638	None	None
+639	None	None
+640	None	None
+641	None	None
+642	None	None
+643	None	None
+644	None	None
+645	None	None
+646	E1 precedes E2	None
+648	None	None
+649	None	None
+650	None	None
+651	None	None
+652	None	None
+653	None	None
+654	None	None
+655	None	None
+656	E1 precedes E2	None
+657	None	None
+658	None	None
+659	None	None
+660	E1 precedes E2	None
+661	None	None
+662	None	None
+663	E1 precedes E2	None
+664	None	None
+665	E1 precedes E2	None
+666	None	None
+667	None	None
+668	None	None
+669	E1 precedes E2	None
+670	None	None
+671	E1 precedes E2	None
+672	None	None
+673	None	None
+674	None	None
+675	None	None
+676	None	None
+677	None	None
+678	None	None
+679	E1 precedes E2	None
+680	None	None
+681	None	None
+682	None	None
+683	None	None
+684	None	None
+685	None	None
+686	None	None
+687	E1 precedes E2	None
+688	None	None
+689	E1 precedes E2	E1 precedes E2
+690	None	E1 precedes E2
+691	None	None
+692	None	None
+693	None	None
+694	None	None
+695	None	None
+696	None	None
+697	None	None
+698	None	None
+699	E1 precedes E2	None
+700	E1 precedes E2	None
+701	None	None
+702	None	None
+703	E1 precedes E2	E1 precedes E2
+704	None	None
+705	None	None
+706	None	None
+707	None	None
+708	None	None
+709	None	None
+710	E1 precedes E2	None
+711	None	None
+712	None	None
+713	None	None
+714	None	None
+715	None	None
+716	None	None
+717	None	None
+718	None	None
+719	None	None
+720	None	None
+721	None	None
+722	None	None
+723	None	None
+724	None	None
+725	None	None
+726	None	None
+727	None	None
+728	None	None
+729	None	None
+730	None	None
+731	E1 precedes E2	None
+732	None	E1 precedes E2
+733	None	None
+734	None	None
+735	None	None
+736	None	None
+737	None	None
+738	None	None
+739	None	None
+740	None	None
+741	None	None
+742	None	None
+744	E1 precedes E2	None
+745	None	None
+746	None	None
+747	None	None
+748	None	None
+749	None	None
+750	None	None
+751	None	None
+752	None	None
+753	E2 precedes E1	None
+754	None	E1 precedes E2
+755	E1 precedes E2	E1 precedes E2
+756	None	None
+757	None	None
+758	None	None
+759	None	None
+760	None	None
+761	None	None
+762	None	None
+763	None	None
+764	None	None
+765	None	None
+766	None	E1 precedes E2
+767	None	None
+768	E1 precedes E2	None
+769	None	None
+770	None	None
+771	E1 precedes E2	E2 precedes E1
+772	None	None
+773	None	None
+774	None	None
+775	E1 precedes E2	None
+777	None	None
+778	None	None
+779	E2 precedes E1	None
+780	None	None
+781	None	E1 precedes E2
+782	E1 precedes E2	None
+783	None	None
+784	E2 precedes E1	None
+785	None	None
+786	None	None
+787	None	None
+788	None	None
+789	None	None
+790	None	None
+791	None	None
+792	None	None
+793	None	None
+794	None	None
+795	None	None
+796	None	None
+797	None	None
+798	None	None
+799	None	None
+800	None	None
+801	None	None
+802	None	None
+803	None	None
+804	None	None
+805	None	None
+806	None	None
+807	E2 precedes E1	E1 precedes E2
+808	None	None
+809	None	None
+810	None	None
+811	None	None
+812	None	None
+813	None	None
+814	None	None
+815	None	None
+816	None	None
+817	None	None
+818	None	None
+819	None	None
+820	None	None
+821	None	None
+822	E2 precedes E1	None
+823	None	None
+824	None	None
+825	None	None
+826	None	None
+827	None	None
+828	E1 precedes E2	None
+829	None	None
+830	E1 precedes E2	None
+831	None	None
+832	E1 precedes E2	E1 precedes E2
+833	None	None
+834	None	None
+837	None	None
+838	None	None
+839	None	None
+840	None	None
+841	None	None
+842	None	E1 precedes E2
+843	None	None
+844	None	None
+845	None	None
+846	None	None
+847	None	None
+848	E1 precedes E2	None
+849	None	None
+850	None	None
+851	None	None
+852	None	None
+853	None	None
+854	None	None
+855	None	None
+856	None	None
+857	None	None
+858	None	E1 precedes E2
+859	E1 precedes E2	E1 precedes E2
+860	E1 precedes E2	None
+861	None	E1 precedes E2
+862	None	E1 precedes E2
+863	None	None
+864	None	None
+865	None	None
+866	None	None
+867	None	None
+868	None	None
+869	None	None
+870	None	None
+871	None	None
+872	None	None
+873	E1 precedes E2	None
+874	None	None
+875	None	None
+876	None	None
+877	None	None
+878	None	None
+879	None	None
+880	E1 precedes E2	None
+881	E1 precedes E2	E1 precedes E2
+882	E1 precedes E2	E1 precedes E2
+883	None	None
+884	None	None
+885	None	None
+886	None	None
+887	None	None
+888	None	None
+889	None	None
+890	None	None
+891	None	None
+892	None	None
+893	None	None
+894	None	None
+895	None	None
+896	E1 precedes E2	None
+897	None	None
+898	None	None
+899	None	None
+900	None	None
+901	E1 precedes E2	E1 precedes E2
+902	E1 precedes E2	E1 precedes E2
+903	E2 precedes E1	None
+904	E1 precedes E2	None
+905	None	None
+906	None	None
+907	None	None
+908	None	None
+909	None	None
+910	None	None
+911	None	None
+912	None	None
+913	None	None
+914	None	None
+915	None	None
