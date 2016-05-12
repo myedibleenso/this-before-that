@@ -15,13 +15,13 @@ class Score(object):
         print("{:.2f}\t{:.2f}\t{:.2f}".format(self.precision, self.recall, self.f1))
 
 class Evaluator(object):
-    def __init__(self, results_file, neg_class = "None"):
-        self.results_file = results_file
+    def __init__(self, df, neg_class = "None"):
+        self.df = df
         self.neg_class = neg_class
         self.smoothing = 0.00001
         
     def compute_class_score(self, class_label):
-        df = pd.read_csv(self.results_file, delimiter="\t")
+        df = self.df.copy(deep=True)
         tp = len(df[(df.Gold == df.Predicted) & (df.Gold == class_label)])        
         fp = len(df[(df.Gold != df.Predicted) & (df.Predicted == class_label) & (df.Gold != class_label)])
         p = tp / (tp + fp + self.smoothing)
@@ -32,7 +32,7 @@ class Evaluator(object):
         return Score(class_label, p, r, f1, tp, fp, fn)
     
     def compute_micro_score(self):
-        df = pd.read_csv(self.results_file, delimiter="\t")
+        df = self.df.copy(deep=True)
         # ignore instances where negative class was predicted
         pos_predictions = len(df[df.Predicted != self.neg_class])
         # num. positive predictions that are correct
@@ -47,7 +47,7 @@ class Evaluator(object):
         return Score("MICRO", p, r, f1, tp, fp, fn)
         
     def compute_macro_score(self):
-        df = pd.read_csv(self.results_file, delimiter="\t")
+        df = self.df.copy(deep=True)
         scores = [self.compute_class_score(cl) for cl in set(df.Gold.values)]
         p = 0
         r = 0
@@ -67,7 +67,7 @@ class Evaluator(object):
         return Score("MACRO", p/len(pos_classes), r/len(pos_classes), f1/len(pos_classes), tp, fp, fn)
             
     def generate_scores_df(self):
-        df = pd.read_csv(self.results_file, delimiter="\t")
+        df = self.df.copy(deep=True)
         header = ("Class", "P", "R", "F1", "TP", "FP", "FN")
         scores = [self.compute_class_score(cl) for cl in sorted(set(df.Gold.values))]
         data = [(s.class_label, s.precision, s.recall, s.f1, s.tp, s.fp, s.fn) for s in scores]
