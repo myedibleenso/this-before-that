@@ -17,6 +17,14 @@ Causal precedence relations in the biomedical domain
   1. [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
   2. [sbt](http://www.scala-sbt.org/release/tutorial/Setup.html)
 
+# Rules used in the deterministic models
+
+Three sets of `Odin`-style rules were used for the deterministic models:
+
+1. [Inter-sentential patterns](https://github.com/clulab/reach/blob/master/src/main/resources/edu/arizona/sista/assembly/grammars/intersentential.yml)
+2. [Inter-sentential patterns](https://github.com/clulab/reach/blob/master/src/main/resources/edu/arizona/sista/assembly/grammars/intrasentential.yml)
+3. [Reichenbach rules for tense and aspect](https://github.com/clulab/reach/blob/master/src/main/resources/edu/arizona/sista/assembly/grammars/tense_aspect.yml)
+
 # Running the `LSTM`
 
 ## Installation: Using `conda` and Python 3.X
