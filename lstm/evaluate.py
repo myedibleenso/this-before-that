@@ -1,4 +1,5 @@
 import pandas as pd
+from sklearn import metrics
 
 class Score(object):
     def __init__(self, class_label, p, r, f1, tp, fp, fn):
@@ -15,11 +16,18 @@ class Score(object):
         print("{:.2f}\t{:.2f}\t{:.2f}".format(self.precision, self.recall, self.f1))
 
 class Evaluator(object):
-    def __init__(self, df, neg_class = "None"):
+    def __init__(self, df, labels = ['E1 precedes E2', 'E2 precedes E1'], neg_class = "None"):
         self.df = df
         self.neg_class = neg_class
         self.smoothing = 0.00001
-        
+        self.labels = labels
+
+    def micro(self):
+        return metrics.f1_score(self.df.Gold.values, self.df.Predicted.values, self.labels, average="micro")
+    
+    def macro(self):
+        return metrics.f1_score(self.df.Gold.values, self.df.Predicted.values, self.labels, average="macro")
+    
     def compute_class_score(self, class_label):
         df = self.df.copy(deep=True)
         tp = len(df[(df.Gold == df.Predicted) & (df.Gold == class_label)])        
