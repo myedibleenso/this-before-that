@@ -1,3 +1,5 @@
+[![arXiv link](https://img.shields.io/badge/cs.CL%3A-arXiv%3A1606.08089-B31B1B.svg)](https://arxiv.org/abs/1606.08089)
+
 # this-before-that
 Causal precedence relations in the biomedical domain
 
