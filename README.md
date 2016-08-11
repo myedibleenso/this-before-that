@@ -23,9 +23,9 @@ Causal precedence relations in the biomedical domain
 
 Three sets of `Odin`-style rules were used for the deterministic models:
 
-1. [Inter-sentential patterns](https://github.com/clulab/reach/blob/master/src/main/resources/edu/arizona/sista/assembly/grammars/intersentential.yml)
-2. [Inter-sentential patterns](https://github.com/clulab/reach/blob/master/src/main/resources/edu/arizona/sista/assembly/grammars/intrasentential.yml)
-3. [Reichenbach rules for tense and aspect](https://github.com/clulab/reach/blob/master/src/main/resources/edu/arizona/sista/assembly/grammars/tense_aspect.yml)
+1. [Inter-sentential patterns](https://github.com/clulab/reach/blob/master/src/main/resources/org/clulab/assembly/grammars/intersentential.yml)
+2. [Intra-sentential patterns](https://github.com/clulab/reach/blob/master/src/main/resources/org/clulab/assembly/grammars/precedence.yml)
+3. [Reichenbach rules for tense and aspect](https://github.com/clulab/reach/blob/master/src/main/resources/org/clulab/assembly/grammars/tense_aspect.yml)
 
 # Running the `LSTM`
 
