@@ -5,7 +5,7 @@ Causal precedence relations in the biomedical domain
 
 
 # Getting the corpus (and other resources)
-  To retrieve the annotated corpus, you will need [`git-lfs`](https://git-lfs.github.com).
+  The annotated corpus [can be found here](https://github.com/myedibleenso/this-before-that/blob/master/annotations.json?raw=true).  To download the word embeddings, however, you will need [`git-lfs`](https://git-lfs.github.com).
 
   Once you've installed `git-lfs`, simply run this command:
 
