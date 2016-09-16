@@ -1,2 +1,0 @@
-annotations.json filter=lfs diff=lfs merge=lfs -text
-pmc-openaccess-w2v.bin filter=lfs diff=lfs merge=lfs -text

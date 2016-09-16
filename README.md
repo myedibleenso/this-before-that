@@ -5,13 +5,7 @@ Causal precedence relations in the biomedical domain
 
 
 # Getting the corpus (and other resources)
-  The annotated corpus [can be found here](https://github.com/myedibleenso/this-before-that/blob/master/annotations.json?raw=true).  To download the word embeddings, however, you will need [`git-lfs`](https://git-lfs.github.com).
-
-  Once you've installed `git-lfs`, simply run this command:
-
-  ```
-  git-lfs fetch
-  ```
+  The annotated corpus [can be found here](https://github.com/myedibleenso/this-before-that/blob/master/annotations.json?raw=true).  The word embeddings can be found [here](https://arizona.box.com/s/3n584pmbudbrlysyzltzoinflsyzpk30).
 
 # Running the sieve-based architecture (*sans*-`lstm`)
 
@@ -40,7 +34,7 @@ Three sets of `Odin`-style rules were used for the deterministic models:
 ```bash
 conda env create -f environment.yml
 ```
-The environment can be updated using the following command: 
+The environment can be updated using the following command:
 
 ```bash
 conda env update -f environment.yml
