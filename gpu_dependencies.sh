@@ -13,7 +13,7 @@ sudo apt-get -y build-dep nvidia-cuda-toolkit
 # some day ubuntu will release a working CUDA repo
 # until that day comes, we need to get it straight from nvidia
 if [ ! -e 'cuda-repo-ubuntu1404-7-5-local_7.5-18_amd64.deb' ]; then
-		wget 'http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda-repo-ubuntu1404-7-5-local_7.5-18_amd64.deb'
+		wget 'http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_7.5.18_linux.run'
 fi
     dpkg -i 'cuda-repo-ubuntu1404-7-5-local_7.5-18_amd64.deb'
     apt-get update
