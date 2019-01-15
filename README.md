@@ -17,9 +17,10 @@ Causal precedence relations in the biomedical domain
 
 Three sets of `Odin`-style rules were used for the deterministic models:
 
-1. [Inter-sentential patterns](https://github.com/clulab/reach/blob/master/src/main/resources/org/clulab/assembly/grammars/intersentential.yml)
-2. [Intra-sentential patterns](https://github.com/clulab/reach/blob/master/src/main/resources/org/clulab/assembly/grammars/precedence.yml)
-3. [Reichenbach rules for tense and aspect](https://github.com/clulab/reach/blob/master/src/main/resources/org/clulab/assembly/grammars/tense_aspect.yml)
+1. [Inter-sentential patterns](https://github.com/clulab/reach/blob/f7b10d62dc039d850779d7b34c04fc5226153efe/assembly/src/main/resources/org/clulab/reach/assembly/grammars/intersentential.yml)
+2. [Intra-sentential patterns](https://github.com/clulab/reach/blob/f7b10d62dc039d850779d7b34c04fc5226153efe/assembly/src/main/resources/org/clulab/reach/assembly/grammars/intrasentential.yml)
+3. [Precedence markers](https://github.com/clulab/reach/blob/f7b10d62dc039d850779d7b34c04fc5226153efe/assembly/src/main/resources/org/clulab/reach/assembly/grammars/precedence-markers.yml)
+4. [Reichenbach rules for tense and aspect](https://github.com/clulab/reach/blob/f7b10d62dc039d850779d7b34c04fc5226153efe/assembly/src/main/resources/org/clulab/reach/assembly/grammars/tense_aspect.yml)
 
 # Running the `LSTM`
 
