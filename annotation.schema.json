@@ -1,0 +1,159 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "id": "annotation",
+  "type": "object",
+  "properties": {
+    "annotator-id": {
+      "id": "annotator-id",
+      "type": "string",
+      "description": "an id that identifies the annotator (ex. email address)"
+    },
+    "coref": {
+      "id": "coref",
+      "type": "boolean",
+      "description": "whether or not the annotation involves coreference resolution"
+    },
+    "cross-sentence": {
+      "id": "cross-sentence",
+      "type": "boolean",
+      "description": "whether or not the two event mentions being compared are in different sentences"
+    },
+    "e1-end": {
+      "id": "e1-end",
+      "type": "integer",
+      "description": "the token index that marks the end of e1"
+    },
+    "e1-label": {
+      "id": "e1-label",
+      "type": "string",
+      "description": "the event type of e1"
+    },
+    "e1-sentence": {
+      "id": "e1-sentence",
+      "type": "string",
+      "description": "the text of e1"
+    },
+    "e1-sentence-index": {
+      "id": "e1-sentence-index",
+      "type": "integer",
+      "description": "the sentence index for e1"
+    },
+    "e1-start": {
+      "id": "e1-start",
+      "type": "integer",
+      "description": "the token index that marks the start of e1"
+    },
+    "e1-tokens": {
+      "id": "e1-tokens",
+      "type": "array",
+      "description": "the list of tokens in e1"
+    },
+    "e1-trigger": {
+      "id": "e1-trigger",
+      "type": "string",
+      "description": "the text of e1's trigger"
+    },
+    "e1-trigger-end": {
+      "id": "e1-trigger-end",
+      "type": "integer",
+      "description": "the token index that marks the end of e1's trigger"
+    },
+    "e1-trigger-start": {
+      "id": "e1-trigger-start",
+      "type": "integer",
+      "description": "the token index that marks the start of e1's trigger"
+    },
+    "e2-end": {
+      "id": "e2-end",
+      "type": "integer",
+      "description": "the token index that marks the end of e2"
+    },
+    "e2-label": {
+      "id": "e2-label",
+      "type": "string",
+      "description": "the event type of e2"
+    },
+    "e2-sentence": {
+      "id": "e2-sentence",
+      "type": "string",
+      "description": "the text of e2"
+    },
+    "e2-sentence-index": {
+      "id": "e2-sentence-index",
+      "type": "integer",
+      "description": "the sentence index for e2"
+    },
+    "e2-start": {
+      "id": "e2-start",
+      "type": "integer",
+      "description": "the token index that marks the start of e2"
+    },
+    "e2-tokens": {
+      "id": "e2-tokens",
+      "type": "array",
+      "description": "the list of tokens in e1"
+    },
+    "e2-trigger": {
+      "id": "e2-trigger",
+      "type": "string",
+      "description": "the text of e1's trigger"
+    },
+    "e2-trigger-end": {
+      "id": "e2-trigger-end",
+      "type": "integer",
+      "description": "the token index that marks the end of e2's trigger"
+    },
+    "e2-trigger-start": {
+      "id": "e2-trigger-start",
+      "type": "integer",
+      "description": "the token index that marks the start of e2's trigger"
+    },
+    "id": {
+      "id": "id",
+      "type": "integer",
+      "description": "a unique identifier for this annotation"
+    },
+    "paper-id": {
+      "id": "paper-id",
+      "type": "string",
+      "description": "a unique identifier for the paper (PMID) from which this event pair was extracted"
+    },
+    "relation": {
+      "id": "relation",
+      "type": "string",
+      "enum": ["E1 precedes E2", "E2 precedes E1","E1 subsumes E2", "E2 subsumes E1", "Equivalent", "Bug", "None", "Other"],
+      "description": "The type of relation that holds between e1 and e2.  Values found in the corpus: \"E1 precedes E2\" (causal precedence), \"E2 precedes E1\" (causal precedence), \"E1 subsumes E2\" (E1 is a more specific or complete mention of E2), \"E2 subsumes E1\" (E2 is a more specific or complete mention of E1), \"Equivalent\" (the event mentions are equivalent), \"Bug\" (the extracted mentions incorrect), \"None\" (no relation holds), \"Other\" (some other relation holds)"
+    },
+    "text": {
+      "id": "text",
+      "type": "string",
+      "description": "the text encompassing the two event mentions and their antecedents (if resolved through coreference)"
+    }
+  },
+  "required": [
+    "annotator-id",
+    "coref",
+    "cross-sentence",
+    "e1-end",
+    "e1-label",
+    "e1-sentence",
+    "e1-start",
+    "e1-tokens",
+    "e1-trigger",
+    "e1-trigger-end",
+    "e1-trigger-start",
+    "e2-end",
+    "e2-label",
+    "e2-sentence",
+    "e2-sentence-index",
+    "e2-start",
+    "e2-tokens",
+    "e2-trigger",
+    "e2-trigger-end",
+    "e2-trigger-start",
+    "id",
+    "paper-id",
+    "relation",
+    "text"
+  ]
+}
